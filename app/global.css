@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@layer base;
+@layer components;
+@layer utilities;
+
+@theme {
+    --primary: #190044;
+    --primary-tint: #A8A5B1;
+    --secondary: #CB1F3F;
+    --background: #F7F5FF;
+    --hover-side-button: #F7F5FF;
+    --border-color: #B7B7B7;
+}
+
+body {
+    @apply text-(--primary);
+}
+
+.container {
+    @apply max-w-[calc(100%-64px)] mx-auto;
+}
+
+.side_bar_nav_btn_text {
+    @apply text-[16px] font-normal leading-[22px];
+}
+
+.dashboard_header {
+    @apply text-[30px] font-semibold text-(--primary) capitalize!;
+}
+
+.dashboard_header_link {
+    @apply text-[12px] text-(--primary) leading-[17px] font-normal capitalize!;
+}

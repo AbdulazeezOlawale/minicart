@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+.mini_card_root {
+    @apply bg-[#ffffff] ring-1 ring-[#D7D7D7]! ring-inset rounded-lg;
+}

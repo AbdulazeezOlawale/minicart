@@ -1,12 +1,14 @@
-import bundleAnalyzer from '@next/bundle-analyzer';
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    async redirects() {
+        return [
+            {
+                source: '/',
+                destination: '/dashboard',
+                permanent: true,
+            },
+        ]
+    },
+};
 
-const withBundleAnalyzer = bundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
-export default withBundleAnalyzer({
-  reactStrictMode: false,
-  experimental: {
-    optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
-  },
-});
+export default nextConfig;
