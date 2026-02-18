@@ -1,38 +1,169 @@
-# Mantine Next.js template
 
-This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
-If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
+# 🚀 Minicart Project Setup Guide
 
-## Features
+A modern web application built with **Next.js**, **Mantine UI**, and TypeScript.
 
-This template comes with the following features:
+---
 
-- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Storybook](https://storybook.js.org/)
-- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
-- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
+## 📦 Tech Stack
 
-## npm scripts
+* ⚡ Next.js
+* 🎨 Mantine UI
+* 🟦 TypeScript
+* 📦 Node.js
 
-### Build and dev scripts
+---
 
-- `dev` – start dev server
-- `build` – bundle application for production
-- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+## 🛠️ Prerequisites
 
-### Testing scripts
+Before getting started, make sure you have installed:
 
-- `typecheck` – checks TypeScript types
-- `lint` – runs ESLint
-- `prettier:check` – checks files with Prettier
-- `jest` – runs jest tests
-- `jest:watch` – starts jest watch
-- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
+* **Node.js** (v18 or later recommended)
+* **npm**, **yarn**, or **pnpm**
+* **Git**
 
-### Other scripts
+Check versions:
 
-- `storybook` – starts storybook dev server
-- `storybook:build` – build production storybook bundle to `storybook-static`
-- `prettier:write` – formats all files with Prettier
-# minicart
+```bash
+node -v
+npm -v
+git --version
+```
+
+---
+
+# 📥 Clone the Repository
+
+```bash
+git clone https://github.com/AbdulazeezOlawale/minicart.git
+```
+
+Navigate into the project folder:
+
+```bash
+cd your-repo-name
+```
+
+---
+
+# 📦 Install Dependencies
+
+Using npm:
+
+```bash
+npm install
+```
+
+Using yarn:
+
+```bash
+yarn install
+```
+
+Using pnpm:
+
+```bash
+pnpm install
+```
+
+---
+
+# ▶️ Run the Development Server
+
+```bash
+npm run dev
+```
+
+Then open:
+
+```
+http://localhost:3000
+```
+
+---
+
+# 🏗️ Build for Production
+
+```bash
+npm run build
+```
+
+To start production server:
+
+```bash
+npm start
+```
+
+---
+
+# 📁 Project Structure
+
+```
+├── app/              # App router pages
+├── components/       # Reusable UI components
+├── public/           # Static assets
+├── styles/           # Global styles
+├── package.json
+└── README.md
+```
+
+---
+
+# 🌍 Environment Variables (Optional)
+
+If your project uses environment variables:
+
+1. Create a `.env.local` file
+2. Add your variables:
+
+```
+NEXT_PUBLIC_API_URL=your_api_url_here
+```
+
+---
+
+# 🧹 Linting
+
+```bash
+npm run lint
+```
+
+---
+
+# 🚀 Deployment
+
+You can deploy easily to:
+
+* Vercel
+* Netlify
+* Railway
+* Any Node-compatible hosting
+
+---
+
+# 🤝 Contributing
+
+1. Fork the repo
+2. Create a new branch
+3. Make changes
+4. Submit a pull request
+
+---
+
+# 📄 License
+
+MIT License.
+
+---
+
+---
+
+If you want, I can also:
+
+* 🔥 Make it more advanced (with badges, screenshots, live demo section)
+* 🎯 Tailor it specifically for Mantine
+* 💼 Make it portfolio-level professional
+* 🧠 Add Docker setup
+* ⚙️ Add CI/CD instructions
+
+Tell me what level you want.
