@@ -7,7 +7,6 @@ import { ChevronRight } from 'lucide-react';
 import Logo from '@/assets/icons/Logo';
 import { dashboardMenuLinks, dashboardSystemLinks, MenuItem } from '@/lib/route-links';
 
-
 const SideBar = () => {
   const location = usePathname();
 
@@ -36,36 +35,72 @@ const SideBar = () => {
           <ul className="flex-1 flex flex-col gap-1">
             {menuState.map((item, index) => (
               <li key={item.id}>
-                <Link
-                  href={item.sub_link ? '' : item.path}
-                  className={`flex items-center justify-between px-4 py-[13px] w-full z-50 rounded-xl ${
-                    !item.sub_link && location.includes(item.path)
-                      ? 'bg-(--primary) text-white'
-                      : 'bg-transparent text-(--primary) hover:bg-(--shade-tint) transition-all ease-in-out'
-                  }`}
-                  onClick={() => item.sub_link && toggleSubList(index)}
-                >
-                  <div className="flex items-center gap-4">
-                    <span
-                      className="size-6"
-                      dangerouslySetInnerHTML={{
-                        __html: location.includes(item.path) ? item.active_icon : item.default_icon,
-                      }}
-                    />
+                {item.sub_link ? (
+                  <div
+                    className={`flex items-center justify-between cursor-pointer px-4 py-[13px] w-full z-50 rounded-xl ${
+                      !item.sub_link && location.includes(item.path)
+                        ? 'bg-(--primary) text-white'
+                        : 'bg-transparent text-(--primary) hover:bg-(--shade-tint) transition-all ease-in-out'
+                    }`}
+                    onClick={() => item.sub_link && toggleSubList(index)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span
+                        className="size-6"
+                        dangerouslySetInnerHTML={{
+                          __html: location.includes(item.path)
+                            ? item.active_icon
+                            : item.default_icon,
+                        }}
+                      />
 
-                    <span className="side_bar_nav_btn_text max-lg:hidden capitalize">
-                      {item.name}
-                    </span>
+                      <span className="side_bar_nav_btn_text max-lg:hidden capitalize">
+                        {item.name}
+                      </span>
+                    </div>
+
+                    {item.sub_link && (
+                      <ChevronRight
+                        className={`transition-all ease-in-out ${
+                          item.isOpen ? 'rotate-90' : 'rotate-0'
+                        }`}
+                      />
+                    )}
                   </div>
+                ) : (
+                  <Link
+                    href={item.path}
+                    className={`flex items-center justify-between px-4 py-[13px] w-full z-50 rounded-xl ${
+                      !item.sub_link && location.includes(item.path)
+                        ? 'bg-(--primary) text-white'
+                        : 'bg-transparent text-(--primary) hover:bg-(--shade-tint) transition-all ease-in-out'
+                    }`}
+                    onClick={() => item.sub_link && toggleSubList(index)}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span
+                        className="size-6"
+                        dangerouslySetInnerHTML={{
+                          __html: location.includes(item.path)
+                            ? item.active_icon
+                            : item.default_icon,
+                        }}
+                      />
 
-                  {item.sub_link && (
-                    <ChevronRight
-                      className={`transition-all ease-in-out ${
-                        item.isOpen ? 'rotate-90' : 'rotate-0'
-                      }`}
-                    />
-                  )}
-                </Link>
+                      <span className="side_bar_nav_btn_text max-lg:hidden capitalize">
+                        {item.name}
+                      </span>
+                    </div>
+
+                    {item.sub_link && (
+                      <ChevronRight
+                        className={`transition-all ease-in-out ${
+                          item.isOpen ? 'rotate-90' : 'rotate-0'
+                        }`}
+                      />
+                    )}
+                  </Link>
+                )}
 
                 {/* Dropdown */}
                 <div
