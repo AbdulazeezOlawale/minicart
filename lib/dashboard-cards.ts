@@ -1,4 +1,6 @@
-export const dashboardCards = [
+import { dashboardCardsType } from "./dashboardCardType";
+
+export const dashboardCards: dashboardCardsType[] = [
   {
     title: 'Total Revenue',
     count: '5,424,326',
@@ -38,6 +40,6 @@ export const dashboardCards = [
 ];
 
 export const changeIcon = {
-  increment: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#10b981" stroke-linecap="round" stroke-linejoin="round" d="M6 8.667A.667.667 0 0 0 5.333 8H3.374a.667.667 0 0 1-.5-1.207l4.557-4.557a.805.805 0 0 1 1.138 0l4.557 4.557a.667.667 0 0 1-.5 1.207h-1.96a.667.667 0 0 0-.666.667v4a.667.667 0 0 1-.667.666H6.667A.667.667 0 0 1 6 12.667z"/></svg>`,
-  decrement: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#f65d6a" stroke-linecap="round" stroke-linejoin="round" d="M10 7.333a.667.667 0 0 0 .667.667h1.959a.667.667 0 0 1 .5 1.207l-4.557 4.558a.804.804 0 0 1-1.138 0L2.873 9.207a.667.667 0 0 1 .5-1.208h1.96A.667.667 0 0 0 6 7.333v-4a.667.667 0 0 1 .667-.666h2.666a.667.667 0 0 1 .667.666z"/></svg>`,
+  "increment": {icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#10b981" stroke-linecap="round" stroke-linejoin="round" d="M6 8.667A.667.667 0 0 0 5.333 8H3.374a.667.667 0 0 1-.5-1.207l4.557-4.557a.805.805 0 0 1 1.138 0l4.557 4.557a.667.667 0 0 1-.5 1.207h-1.96a.667.667 0 0 0-.666.667v4a.667.667 0 0 1-.667.666H6.667A.667.667 0 0 1 6 12.667z"/></svg>`, color: "#10B981"},
+  "decrement": {icon: `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path stroke="#f65d6a" stroke-linecap="round" stroke-linejoin="round" d="M10 7.333a.667.667 0 0 0 .667.667h1.959a.667.667 0 0 1 .5 1.207l-4.557 4.558a.804.804 0 0 1-1.138 0L2.873 9.207a.667.667 0 0 1 .5-1.208h1.96A.667.667 0 0 0 6 7.333v-4a.667.667 0 0 1 .667-.666h2.666a.667.667 0 0 1 .667.666z"/></svg>`, color: "#F65D6A"}
 };

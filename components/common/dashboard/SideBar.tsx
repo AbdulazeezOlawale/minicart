@@ -35,11 +35,11 @@ const SideBar = () => {
             {dashboardMenuLinks.map((item, index) => (
               <li key={item.id}>
                 <Link
-                  href={item.path}
+                  href={item.sub_link ? "" : item.path}
                   className={`flex items-center justify-between px-4 py-[13px] w-full z-50 rounded-xl ${
                     !item.sub_link && location.includes(item.path)
                       ? 'bg-(--primary) text-white'
-                      : 'bg-transparent text-(--primary) hover:bg-(--hover-side-button) transition-all ease-in-out'
+                      : 'bg-transparent text-(--primary) hover:bg-(--shade-tint) transition-all ease-in-out'
                   }`}
                   onClick={() => item.sub_link && toggleSubList(item.isOpen, index)}
                 >
@@ -76,7 +76,7 @@ const SideBar = () => {
                       <li key={index}>
                         <Link
                           href={subLinkItem.path}
-                          className={`w-full block px-3 py-2 capitalize text-sm font-semibold hover:bg-(--hover-side-button) transition-all rounded-xl ease-in-out ${
+                          className={`w-full block px-3 py-2 capitalize text-sm font-semibold hover:bg-(--shade-tint) transition-all rounded-xl ease-in-out ${
                             location.includes(subLinkItem.path)
                               ? 'bg-blue-600 text-white'
                               : 'bg-transparent text-gray-700'
