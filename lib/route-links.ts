@@ -1,4 +1,20 @@
-export const dashboardMenuLinks = [
+export type SubLink = {
+  name: string;
+  path: string;
+};
+
+export type MenuItem = {
+  name: string;
+  id: number;
+  path: string;
+  default_icon: string;
+  active_icon: string;
+  sub_link?: SubLink[];
+  isOpen?: boolean;
+};
+
+
+export const dashboardMenuLinks: MenuItem[] = [
   {
     name: 'dashboard',
     id: 0,
